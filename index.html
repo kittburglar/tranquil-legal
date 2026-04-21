@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kit White Noise - Premium white noise and ambient sounds with AI-powered custom sound generation">
+    <meta name="keywords" content="white noise, ambient sounds, sleep, focus, relaxation, AI sounds">
+    <title>Kit White Noise - AI-Powered Ambient Sounds</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 27px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 1.3em;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+
+        .download-badge {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .download-badge img {
+            height: 50px;
+        }
+
+        .features {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            margin: 40px 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #667eea;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .feature {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .feature h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .feature p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .screenshots {
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 60px 40px;
+            margin: 40px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .screenshots h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .screenshot-grid {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 20px 0;
+            justify-content: center;
+        }
+
+        .screenshot {
+            flex: 0 0 auto;
+            width: 250px;
+            height: 540px;
+            background: #f5f5f5;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+
+        footer {
+            background: rgba(0,0,0,0.2);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer-links {
+            margin: 30px 0;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .pricing {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            margin: 40px 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .pricing h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #667eea;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .pricing-card.featured {
+            border-color: #667eea;
+            background: linear-gradient(135deg, rgba(102,126,234,0.05) 0%, rgba(118,75,162,0.05) 100%);
+        }
+
+        .pricing-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .pricing-card .price {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin: 20px 0;
+        }
+
+        .pricing-card .price span {
+            font-size: 0.4em;
+            color: #999;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .pricing-card li {
+            padding: 8px 0;
+            color: #666;
+        }
+
+        .pricing-card li:before {
+            content: "✓ ";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .tagline {
+                font-size: 1.1em;
+            }
+
+            .features, .pricing, .screenshots {
+                padding: 40px 20px;
+            }
+
+            .features h2, .pricing h2, .screenshots h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="app-icon">🎵</div>
+            <h1>Kit White Noise</h1>
+            <p class="tagline">Premium white noise and ambient sounds with AI-powered custom sound generation</p>
+            <div class="download-badges">
+                <!-- Replace with your actual App Store link -->
+                <a href="#" class="download-badge">
+                    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1459468800" alt="Download on the App Store">
+                </a>
+            </div>
+        </header>
+
+        <div class="features">
+            <h2>Features</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-icon">🎨</div>
+                    <h3>AI Sound Generation</h3>
+                    <p>Create custom ambient sounds using AI. Describe any sound and let our advanced AI generate it for you in seconds.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎧</div>
+                    <h3>Premium Sound Library</h3>
+                    <p>Access hundreds of high-quality white noise and ambient sounds, from rain to ocean waves to city ambience.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Sleep Timer</h3>
+                    <p>Set a timer to automatically stop playback after you fall asleep. Perfect for bedtime routines.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎛️</div>
+                    <h3>Mix & Match</h3>
+                    <p>Combine multiple sounds and adjust their volumes to create your perfect ambient soundscape.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">☁️</div>
+                    <h3>Cloud Sync</h3>
+                    <p>Your AI-generated sounds sync across all your devices via iCloud.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Ad-Free Premium</h3>
+                    <p>Upgrade to Premium for an ad-free experience with unlimited access to all features.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pricing">
+            <h2>Pricing</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Free</h3>
+                    <div class="price">$0<span></span></div>
+                    <ul>
+                        <li>Basic sound library</li>
+                        <li>Limited AI generations</li>
+                        <li>Sleep timer</li>
+                        <li>Ad-supported</li>
+                    </ul>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Premium</h3>
+                    <div class="price">$4.99<span>/month</span></div>
+                    <ul>
+                        <li>Full sound library</li>
+                        <li>3 AI sounds daily</li>
+                        <li>Extended AI duration (30s)</li>
+                        <li>Ad-free experience</li>
+                        <li>Cloud sync</li>
+                    </ul>
+                </div>
+                <div class="pricing-card">
+                    <h3>Premium Plus</h3>
+                    <div class="price">$9.99<span>/month</span></div>
+                    <ul>
+                        <li>Everything in Premium</li>
+                        <li>10 AI sounds daily</li>
+                        <li>Priority generation</li>
+                        <li>Early access features</li>
+                    </ul>
+                </div>
+                <div class="pricing-card">
+                    <h3>Credit Packs</h3>
+                    <div class="price">$2.99+</div>
+                    <ul>
+                        <li>One-time purchases</li>
+                        <li>10-100 AI credits</li>
+                        <li>Never expire</li>
+                        <li>Stack with subscriptions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="screenshots">
+            <h2>Screenshots</h2>
+            <div class="screenshot-grid">
+                <div class="screenshot">Screenshot 1</div>
+                <div class="screenshot">Screenshot 2</div>
+                <div class="screenshot">Screenshot 3</div>
+                <div class="screenshot">Screenshot 4</div>
+            </div>
+            <p style="text-align: center; color: white; margin-top: 20px; opacity: 0.8;">
+                Add your actual app screenshots here
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Kittiphong Xayasane. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-use.html">Terms of Use</a>
+            <a href="support.html">Support</a>
+        </div>
+        <p style="opacity: 0.7; margin-top: 20px;">
+            Contact: <a href="mailto:kittiphongxayasane@gmail.com" style="color: white;">kittiphongxayasane@gmail.com</a>
+        </p>
+    </footer>
+</body>
+</html>
