@@ -1,0 +1,31 @@
+# app-ads.txt for Kit White Noise
+# This file authorizes Google AdMob to sell ad inventory for this app
+# 
+# IMPORTANT: Replace pub-0000000000000000 with your actual AdMob Publisher ID
+# To find your publisher ID:
+# 1. Sign in to AdMob at https://admob.google.com
+# 2. Click Apps → View all apps → app-ads.txt
+# 3. Click "How to set up app-ads.txt"
+# 4. Copy your personalized code snippet
+#
+# Format: google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+# The last part (f08c47fec0942fa0) is Google's seller account ID - do not change
+
+google.com, pub-4459625420393853, DIRECT, f08c47fec0942fa0
+
+# INSTRUCTIONS:
+# 1. Get your personalized code snippet from AdMob (see above)
+# 2. Replace the line above with your actual publisher ID
+# 3. Upload this file to the ROOT directory of your website
+#    Example: https://yourdomain.com/app-ads.txt (NOT in a subfolder)
+# 4. Verify it's accessible by visiting the URL in your browser
+# 5. Return to AdMob and they will automatically verify it within 24 hours
+
+# Additional authorized sellers (if needed)
+# If you use other ad networks besides AdMob, add them here
+# Example format:
+# adnetwork.com, pub-id, RELATIONSHIP, certification-id
+
+# For more information:
+# https://iabtechlab.com/ads-txt/
+# https://support.google.com/admob/answer/9363762
